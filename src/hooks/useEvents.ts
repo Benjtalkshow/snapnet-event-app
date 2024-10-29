@@ -1,7 +1,7 @@
 import { useQuery } from '@tanstack/react-query'
 import { Event } from '@/types/event'
 
-const EVENTS_API = import.meta.env.VITE_EVENTS_API_URL ;
+const EVENTS_API = import.meta.env.VITE_EVENTS_API_URL || "https://my-json-server.typicode.com/Code-Pop/Touring-Vue-Router/events";
 
 export function useEvents() {
     return useQuery<Event[]>({
